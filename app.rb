@@ -32,14 +32,16 @@ end
 
 #Create
 post '/videos' do
-  sql = "INSERT INTO memetubes (title, url, genre, description, tags) VALUES ('#{params[:title]}', '#{params[:url]}', '#{params[:genre]}', '#{params[:description]}', '#{params[:tags]}') returning *"
+  sql = "INSERT INTO memetubes (title, url, genre, description) VALUES ('#{params[:title]}', '#{params[:url]}', '#{params[:genre]}', '#{params[:description]}') returning *"
+  # sql_tags = "INSERT INTO tags (tags) VALUES ('#{params[:tags]}) returning *"
     video = @db.exec(sql).first
+    # tag = @db.exec(tags).first
 end
 
 #Show
 get '/videos/:id' do
-  sql = 'SELECT * FROM memetubes WHERE ' ##this will link to search function, have a think about functionality here
-  @video = db.exec(sql).first
+  sql = "SELECT * FROM memetubes WHERE id = #{params[:id]}"
+  @video = @db.exec(sql).first
 
   erb :show
 end
@@ -47,7 +49,7 @@ end
 #Edit
 get '/videos/:id/edit' do
   sql = "SELECT * FROM memetubes WHERE id = #{params[:id]}"
-  @video = db.exec(sql).first
+  @video = @db.exec(sql).first
 
   erb :edit
 end
