@@ -25,6 +25,11 @@ get '/videos' do
   erb :index
 end
 
+#New
+get '/videos/new' do
+  erb :new
+end
+
 #Create
 post '/videos' do
   sql = "INSERT INTO memetubes (title, url, genre, description, tags) VALUES ('#{params[:title]}', '#{params[:url]}', '#{params[:genre]}', '#{params[:description]}', '#{params[:tags]}') returning *"
