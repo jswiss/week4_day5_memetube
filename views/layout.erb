@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memetube!</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Memetubez</a>
+      <ul id="nav-mobile" class="right">
+        <li><a href="/todos/new"><i class="material-icons left">playlist_add</i>New</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <%= yield %>
+
+  </div>
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+</body>
+</html>
