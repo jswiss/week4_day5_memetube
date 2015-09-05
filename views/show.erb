@@ -6,7 +6,7 @@
         <p><%= @video['description'] %></p>
       </div>
       <div class="iframe">
-        <iframe src="<%= @video['url'] %>" frameborder="0"></iframe>
+        <iframe src="<%= @video['url'] %>" width="500" height="300" allowfullscreen frameborder="0"></iframe>
       </div>
       <div class="card-action">
         <a href="/videos/<%= @video['id'] %>/edit">edit</a>

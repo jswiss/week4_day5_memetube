@@ -2,6 +2,12 @@
   z-index: 50;
 }
 
-.row {
+.card {
   margin-top: 40px;
+  width: 600px;
 }
+
+a.brand-logo {
+  margin-left: 20px;
+}
+
