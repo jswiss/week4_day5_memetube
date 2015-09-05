@@ -3,7 +3,11 @@
     <div class="collection">
       <% @videos.each do |video| %>
         <!-- need to add views on the right of the box below -->
-        <a href="/videos/<%= video['id'] %>" class="collection-item left-align"><%= video['title']  %><%= video['views']  %></a> 
+        <a href="/videos/<%= video['id'] %>" class="collection-item left-align">
+        <span class="vid_title"><%= video['title']  %> </span>
+        <span class="views"><%= video['views']  %> </span>
+        <br>
+        <%= video['description'] %></a> 
       <% end %>
     </div>
   </div>

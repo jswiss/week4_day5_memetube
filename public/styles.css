@@ -1,5 +1,14 @@
+.nav-wrapper {
+  background: darkslateblue;
+}
+
+.card {
+  background: cadetblue;
+}
+
 .iframe {
   z-index: 50;
+  margin-left: 45px;
 }
 
 .card {
@@ -9,5 +18,10 @@
 
 a.brand-logo {
   margin-left: 20px;
+}
+
+.vid_title {
+  font-size: 18px;
+  font-weight: bold;
 }
 
