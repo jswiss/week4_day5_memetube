@@ -64,9 +64,10 @@ end
 
 #Delete
 post 'videos/:id/delete' do
-  sql = "delete from memetubes where id = #{params[:id]}"
-  binding.pry
+   "Hello World"
+  sql = "DELETE from memetubes WHERE id = #{params[:id]}"
   @db.exec(sql)
+
   redirect to '/videos'
 end
 

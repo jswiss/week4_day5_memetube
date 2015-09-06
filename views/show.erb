@@ -6,11 +6,11 @@
         <p><%= @video['description'] %></p>
       </div>
       <div class="iframe">
-        <iframe id="iframe" type="text/html" width="500" height="300" src="YF6jADQ4ozY" frameborder="0"></iframe>
+        <iframe width="510" height="315" src="http://www.youtube.com/embed/<% @video['url'][-11..-1] %>" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="card-action">
         <a href="/videos/<%= @video['id'] %>/edit">edit</a>
-        <form action="/videos/<%= @video['id'] %>/delete" method="post">
+        <form action="/videos/<%= @video['id'] %>" method="post">
           <button class="fake-link">delete</button>
         </form>
       </div>
@@ -19,4 +19,9 @@
 </div>
 
 
-<% @video['url'][-11..-1] %>
+<!-- 
+ <iframe id="iframe" type="text/html" width="500" height="300" src="<% @video['url'][-11..-1] %>" frameborder="0"></iframe> -->
+<!--  <iframe id="player" type="text/html" width="640" height="390" src="https://youtu.be/embed/<%= @video['url'] %>" frameborder="0">
+ </iframe> -->
+
+
